@@ -7,6 +7,13 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<!-- Addded a Dynamic link via jquery onchange method -->
+<div class="container">
+   <select class="pull-right" id="Lang" onchange="if (this.value) window.location.href=this.value">
+     <option value="/MultiLang">English</option>
+     <option value="/MultiLang/ger">German</option>
+   </select>
+</div>
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -22,9 +29,9 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
+        <li class="active"><a href="#">@lang('multilang.contact') <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">@lang('multilang.about')</a></li>
+        {{--  <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="#">Action</a></li>
@@ -35,7 +42,7 @@
             <li class="divider"></li>
             <li><a href="#">One more separated link</a></li>
           </ul>
-        </li>
+        </li>  --}}
       </ul>
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
@@ -44,7 +51,7 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
+        <li><a href="#">@lang('multilang.login')</a></li>
       </ul>
     </div>
   </div>
