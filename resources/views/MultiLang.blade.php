@@ -10,6 +10,7 @@
 <!-- Addded a Dynamic link via jquery onchange method -->
 <div class="container">
    <select class="pull-right" id="Lang" onchange="if (this.value) window.location.href=this.value">
+     <option> Select Language </option>
      <option value="/MultiLang">English</option>
      <option value="/MultiLang/ger">German</option>
    </select>
