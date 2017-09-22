@@ -15,8 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/MultiLang', function() {
+Route::get('/MultiLang/{lang?}', function($lang=null) {
 
+     App::setlocale($lang);
      return view ('MultiLang');
 
 });
